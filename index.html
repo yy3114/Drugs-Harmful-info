@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【整合警示】毒品對泌尿系統的嚴重危害</title>
+    <!-- 載入 Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 載入 Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* 使用 'Inter' 字體以確保中英文顯示優良 */
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background-color: #f0f3f5;
+        }
+        /* 定義 Ketamine 嚴重危害卡的樣式 */
+        .ketamine-card {
+            box-shadow: 0 10px 15px -3px rgba(239, 68, 68, 0.3), 0 4px 6px -2px rgba(239, 68, 68, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-bottom: 8px solid #b91c1c; /* Deep Red for emphasis */
+        }
+        .ketamine-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(239, 68, 68, 0.4), 0 10px 10px -5px rgba(239, 68, 68, 0.2);
+        }
+        /* 定義表格樣式 */
+        .responsive-table th {
+            background-color: #fef2f2; /* red-50 */
+            color: #b91c1c; /* red-700 */
+            padding: 12px 10px;
+            font-size: 0.9rem;
+            text-align: left;
+            border-bottom: 2px solid #ef4444;
+        }
+        /* 針對名人警示表格特別配色 */
+        .celebrity-table th {
+            background-color: #e0e7ff; /* indigo-100 */
+            color: #4338ca; /* indigo-700 */
+            border-bottom: 2px solid #6366f1;
+        }
+        /* 針對機轉表格配色 */
+        .mechanism-table th {
+            background-color: #ecfdf5; /* green-50 */
+            color: #047857; /* green-700 */
+            border-bottom: 2px solid #10b981;
+        }
+        .responsive-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb; /* gray-200 */
+            vertical-align: top;
+        }
+        /* 針對名人表格的容器，使其可以橫向滾動 */
+        .celebrity-scroll-container {
+            max-height: 400px; /* 限制高度以實現垂直滾動 */
+            overflow-y: auto;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- 頂部警示橫幅 -->
+    <header class="bg-red-800 shadow-xl sticky top-0 z-10">
+        <div class="max-w-5xl mx-auto p-4 flex items-center justify-center">
+            <i data-lucide="siren" class="w-8 h-8 text-white mr-3 animate-pulse"></i>
+            <h1 class="text-2xl font-black text-white tracking-widest">
+                毒害警示：不可逆的泌尿系統損傷
+            </h1>
+        </div>
+    </header>
+
+    <!-- 主要內容區塊 -->
+    <main class="max-w-5xl mx-auto p-4 md:p-10">
+
+        <!-- 核心警語 -->
+        <section class="mb-12 p-8 bg-red-100 rounded-2xl border-2 border-red-400 shadow-xl text-center">
+            <h2 class="text-3xl font-extrabold text-red-800 mb-3">健康警示總覽</h2>
+            <p class="text-red-700 text-xl leading-relaxed">
+                毒品對生理系統的傷害是長期且往往不可逆轉的。它們攻擊神經、心血管、肝臟和泌尿系統，對身體造成全面性、毀滅性的打擊。
+            </p>
+        </section>
+
+        <!-- 短暫刺激與吸引力解釋 -->
+        <section class="mb-12 p-8 bg-teal-100 rounded-2xl border-2 border-teal-400 shadow-xl">
+            <h3 class="text-2xl font-bold text-teal-800 mb-4 flex items-center">
+                <i data-lucide="zap" class="w-7 h-7 mr-3 text-teal-600"></i>
+                毒品為何吸引人：短暫的刺激與誤解
+            </h3>
+            <p class="text-gray-700 text-lg leading-relaxed mb-4">
+                許多毒品，特別是興奮劑（如冰毒、古柯鹼），會導致使用者感受到強烈的欣快感、極度興奮、精力和自信心暴增。這是因為它們強制性地促使大腦釋放大量的神經傳導物質（如多巴胺），產生強烈而短暫的「超常」刺激。
+            </p>
+
+            <div class="bg-teal-50 p-4 rounded-xl border border-teal-300">
+                <h4 class="text-xl font-semibold text-teal-700 mb-2 flex items-center">
+                    <i data-lucide="heart-pulse" class="w-5 h-5 mr-2"></i>
+                    以冰毒為例：性功能加強的錯覺
+                </h4>
+                <ul class="list-disc list-inside text-gray-700 ml-4 space-y-2">
+                    <li>
+                        <span class="font-semibold">短暫的興奮：</span>冰毒會提高性慾 (libido) 並降低心理上的禁忌感，讓使用者在短期內誤以為性能力或性愉悅感增強。
+                    </li>
+                    <li>
+                        <span class="font-semibold">真實的危害：</span>這種「增強」是身體被藥物強制驅動的結果。長期而言，冰毒會導致<span class="text-red-600 font-bold">永久性勃起功能障礙（ED）</span>、性冷感，並因藥物濫用導致的脫水和心血管壓力增加，在性行為中發生猝死的風險極高。
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 新增：生理傷害機轉深度分析區塊 -->
+        <section class="mb-12 p-8 bg-white rounded-2xl border-2 border-green-500 shadow-xl">
+            <div class="flex items-center mb-6 text-green-800">
+                <i data-lucide="microscope" class="w-10 h-10 mr-3 fill-green-200"></i>
+                <h3 class="text-3xl font-bold border-b-4 border-green-500 pb-1">藥物毒性：生理系統深度攻擊機轉</h3>
+            </div>
+
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                藥物對人體的傷害是多層次的，從細胞層級的神經傳導干擾，到器官層級的急性衰竭和慢性病變。
+            </p>
+
+            <!-- 主要生理傷害機轉 (Mechanism Section) -->
+            <h4 class="text-xl font-bold text-green-700 mb-3 border-l-4 border-green-500 pl-3">一、主要生理傷害機轉（七大路徑）</h4>
+            <ol class="space-y-4 text-gray-700 list-decimal list-inside ml-4">
+                <li>
+                    <span class="font-bold text-green-800">直接作用於受體與神經傳導系統（急性效應）：</span>
+                    許多藥物是受體激動劑或拮抗劑，改變神經元放電或神經迴路，導致精神狀態改變、癲癇、呼吸抑制等。例：阿片類藥物啟動 $\mu$-opioid 受體，抑制呼吸中樞，可能直接造成致命性呼吸停頓。
+                </li>
+                <li>
+                    <span class="font-bold text-green-800">氧化壓力（ROS）與神經毒性（慢性／累積性）：</span>
+                    某些興奮劑（如甲基安非他命）會造成多巴胺自體氧化、產生 $\text{ROS}$（活性氧）與神經毒性，損傷多巴胺軸突與神經元，造成認知、運動與情緒長期問題。
+                </li>
+                <li>
+                    <span class="font-bold text-green-800">缺氧 / 呼吸抑制導致的腦損傷：</span>
+                    呼吸抑制（特別是阿片類合併其他中樞抑制劑）會導致腦部缺氧，短時間即可造成不可逆腦損傷。
+                </li>
+                <li>
+                    <span class="font-bold text-green-800">心血管傷害（急慢性）：</span>
+                    興奮劑（可卡因、甲安）會增加心肌耗氧、血壓與痙攣風險，可誘發心肌梗塞、心律不整、腦中風；長期則促進動脈硬化與心功能不全。
+                </li>
+                <li>
+                    <span class="font-bold text-green-800">肝腎毒性（代謝與解毒負擔）：</span>
+                    很多藥物需經肝臟代謝（產生毒性代謝物）或經腎排泄，長期或大量使用導致肝炎、肝纖維化、腎損傷。酒精為典型例子：乙醇代謝產生醛類與 $\text{ROS}$，促成發炎、纖維化，最終可能演變為肝硬化。
+                </li>
+                <li>
+                    <span class="font-bold text-green-800">免疫與感染風險（行為與生理雙重）：</span>
+                    靜脈注射等行為帶來細菌/病毒感染（如細菌性心內膜炎、$\text{C}$ 型肝炎、$\text{HIV}$），同時某些藥物也可抑制免疫功能。
+                </li>
+                <li>
+                    <span class="font-bold text-green-800">代謝 / 內分泌與生殖毒性：</span>
+                    長期用藥會改變內分泌（例如睪固素、月經規律），並可能對胎兒造成發育影響（孕期使用的風險）。（相關機轉多為荷爾蒙干擾與胎盤/代謝毒性）
+                </li>
+            </ol>
+
+            <!-- 常見藥物類別＋典型生理傷害 (Drug Class Section) -->
+            <h4 class="text-xl font-bold text-green-700 mt-8 mb-3 border-l-4 border-green-500 pl-3">二、常見藥物類別與典型生理傷害</h4>
+            <div class="overflow-x-auto">
+                <table class="w-full responsive-table mechanism-table border-collapse text-sm">
+                    <thead>
+                        <tr>
+                            <th class="w-1/4">藥物類別</th>
+                            <th class="w-1/3">急性／致命風險</th>
+                            <th class="w-auto">慢性／累積性傷害</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold">阿片類（海洛因、嗎啡、芬太尼）</td>
+                            <td class="text-red-600 font-semibold">呼吸抑制、腦缺氧</td>
+                            <td>內分泌低下、免疫改變、靜脈感染、成癮</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">興奮劑（可卡因、甲基安非他命）</td>
+                            <td class="text-red-600 font-semibold">高血壓、心肌缺氧、癲癇、精神病</td>
+                            <td>神經毒性、加速心血管疾病、永久性勃起功能障礙</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">酒精</td>
+                            <td class="text-red-600 font-semibold">急性中毒、嘔吐導致吸入性肺炎</td>
+                            <td>肝臟脂肪變性 $\to$ 肝炎 $\to$ 肝硬化；胰臟炎、神經退化</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">吸入劑（溶劑、黏著劑）</td>
+                            <td class="text-red-600 font-semibold">心律失常（Sudden Sniffing Death）、中樞抑制</td>
+                            <td>神經退化、肝腎損傷</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">苯二氮平類 / 巴比妥類</td>
+                            <td class="text-red-600 font-semibold">過量可造成嚴重呼吸抑制（與阿片合用風險特別高）</td>
+                            <td>長期依賴、認知功能障礙</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 愷他命危害專區 (KBS) - 整合表格一 -->
+        <section class="mb-12">
+            <div class="flex items-center mb-6 text-red-700">
+                <i data-lucide="bomb" class="w-10 h-10 mr-3 fill-red-200"></i>
+                <h3 class="text-3xl font-bold border-b-4 border-red-500 pb-1">重點危害：愷他命（K他命）— 愷他命膀胱症候群 (KBS)</h3>
+            </div>
+            
+            <div class="bg-white p-6 md:p-8 rounded-2xl ketamine-card overflow-x-auto">
+                <p class="text-gray-600 leading-relaxed text-lg mb-6">
+                    愷他命的代謝產物具有直接的化學毒性，會嚴重破壞膀胱內壁的保護層（尿路上皮），導致膀胱慢性發炎和纖維化。
+                </p>
+
+                <!-- 愷他命危害表格 (Table 1) -->
+                <table class="w-full responsive-table border-collapse text-sm">
+                    <thead>
+                        <tr>
+                            <th class="w-1/4">病理變化</th>
+                            <th class="w-1/3">臨床症狀（下泌尿道症狀）</th>
+                            <th class="w-auto">嚴重後果</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold">膀胱發炎與纖維化</td>
+                            <td class="text-red-600 font-semibold">嚴重頻尿</td>
+                            <td>膀胱容量萎縮：容量急劇縮小，嚴重者需包尿布。</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">膀胱黏膜潰瘍</td>
+                            <td class="text-red-600 font-semibold">尿急、解尿疼痛、血尿、恥骨上區疼痛</td>
+                            <td>腎臟積水 (Hydronephrosis)：尿液逆流，損害腎臟。</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">尿路上皮損傷</td>
+                            <td class="text-red-600 font-semibold">夜尿</td>
+                            <td>腎功能受損甚至腎衰竭：腎臟因積水和高壓受損，可能導致永久性腎功能喪失。</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="mt-4 text-red-500 text-sm">
+                    <i data-lucide="alert-circle" class="w-4 h-4 inline mr-1"></i>
+                    這些傷害可能在停止使用後仍無法完全恢復，需長期治療。
+                </p>
+            </div>
+        </section>
+
+        <!-- 其他毒品危害區塊 - 整合表格二 -->
+        <section class="mb-12">
+            <div class="flex items-center mb-6 text-orange-700">
+                <i data-lucide="flask-conical" class="w-10 h-10 mr-3 fill-orange-200"></i>
+                <h3 class="text-3xl font-bold border-b-4 border-orange-500 pb-1">其他毒品對泌尿系統的間接損傷</h3>
+            </div>
+
+            <!-- 冰毒資訊 -->
+            <div class="bg-orange-50 p-6 rounded-t-xl border-t-4 border-orange-500 mb-4">
+                <h4 class="text-xl font-bold text-orange-700 mb-2">冰毒 (Methamphetamine) 簡介與機制</h4>
+                <p class="text-gray-600 leading-relaxed text-base">
+                    冰毒是一種強效的中樞神經興奮劑。它對泌尿系統的危害主要不是直接的毒性，而是透過其對心血管系統的劇烈影響，導致<span class="font-semibold">血壓飆升</span>和全身<span class="font-semibold">血管強烈收縮</span>。這種持續的高壓和缺血狀態，會使腎臟長期處於損傷風險中，最終導致慢性腎病變。
+                </p>
+            </div>
+            
+            <div class="bg-white p-6 md:p-8 rounded-b-2xl shadow-lg border-bottom border-orange-600 overflow-x-auto">
+                <!-- 其他毒品危害表格 (Table 2) -->
+                <table class="w-full responsive-table border-collapse text-sm">
+                    <thead>
+                        <tr>
+                            <th class="bg-orange-50 text-orange-700 border-orange-400 w-1/4">毒品名稱</th>
+                            <th class="bg-orange-50 text-orange-700 border-orange-400 w-1/3">主要危害機制</th>
+                            <th class="bg-orange-50 text-orange-700 border-orange-400 w-auto">對泌尿系統的影響</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="font-bold">MDMA（搖頭丸、Ecstasy）</td>
+                            <td>體溫過高、橫紋肌溶解症</td>
+                            <td class="text-orange-600 font-medium">導致急性腎衰竭。</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">古柯鹼（Cocaine）</td>
+                            <td>血管收縮與高血壓</td>
+                            <td class="text-orange-600 font-medium">導致腎梗塞、急性腎衰竭，腎臟缺血性損傷。</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">冰毒/安非他命</td>
+                            <td>強烈中樞神經興奮、嚴重高血壓、血管收縮</td>
+                            <td class="text-orange-600 font-medium">長期導致腎臟缺血性損傷、慢性腎病變，可能增加腎細胞癌的風險。</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">類鴉片藥物/海洛因</td>
+                            <td>中樞神經抑制及橫紋肌溶解症</td>
+                            <td class="text-orange-600 font-medium">引起尿瀦留（排尿困難），增加感染和腎病變風險。</td>
+                        </tr>
+                        <tr>
+                            <td class="font-bold">大麻（Cannabis）</td>
+                            <td>長期使用</td>
+                            <td class="text-orange-600 font-medium">部分研究顯示與膀胱癌及前列腺癌的風險增加有關。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 名人殞落警世錄 -->
+        <section class="mb-12">
+            <div class="flex items-center mb-6 text-indigo-800">
+                <i data-lucide="heart-off" class="w-10 h-10 mr-3 fill-indigo-300"></i>
+                <h3 class="text-3xl font-bold border-b-4 border-indigo-500 pb-1">名人殞落：藥物過量警世錄 (Tragic Examples)</h3>
+            </div>
+            
+            <div class="bg-white p-6 md:p-8 rounded-2xl shadow-xl border-t-8 border-indigo-700">
+                <p class="text-gray-700 leading-relaxed text-lg mb-6">
+                    這些來自音樂、電影、體育界的巨星們，因非法毒品或處方藥物濫用，生命在盛年戛然而止。他們的故事是毒品危害最直接且最沉痛的證據。
+                </p>
+
+                <!-- 名人死亡案例表格 - 增加垂直滾動 -->
+                <div class="celebrity-scroll-container">
+                    <table class="min-w-full responsive-table celebrity-table border-collapse text-sm">
+                        <thead>
+                            <tr>
+                                <th class="w-1/4">姓名 (Name)</th>
+                                <th class="w-1/5">職業/國家</th>
+                                <th class="w-auto">死亡原因 (主要藥物)</th>
+                                <th class="w-1/6">年齡</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 27俱樂部代表 -->
+                            <tr>
+                                <td class="font-bold">吉米·罕醉克斯 (Jimi Hendrix)</td>
+                                <td>搖滾吉他手/美國</td>
+                                <td>巴比妥類藥物過量 (Barbiturates)</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">賈尼斯·賈普林 (Janis Joplin)</td>
+                                <td>搖滾歌手/美國</td>
+                                <td>海洛因過量</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">吉姆·莫里森 (Jim Morrison)</td>
+                                <td>歌手 (The Doors)/美國</td>
+                                <td>疑似海洛因過量導致心臟衰竭</td>
+                                <td>27</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">寇特·柯本 (Kurt Cobain)</td>
+                                <td>歌手 (Nirvana)/美國</td>
+                                <td>海洛因過量後自殺</td>
+                                <td>27</td>
+                            </tr>
+                             <tr>
+                                <td class="font-bold">艾米·懷恩豪斯 (Amy Winehouse)</td>
+                                <td>靈魂樂歌手/英國</td>
+                                <td>酒精中毒（毒品與戒癮後的復發）</td>
+                                <td>27</td>
+                            </tr>
+                            <!-- 演員 -->
+                            <tr>
+                                <td class="font-bold">希斯·萊傑 (Heath Ledger)</td>
+                                <td>演員/澳洲</td>
+                                <td>處方藥物混合過量 (止痛藥、安眠藥)</td>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">菲利普·塞默·霍夫曼 (P. S. Hoffman)</td>
+                                <td>奧斯卡影帝/美國</td>
+                                <td>混合毒品過量（海洛因、古柯鹼、安非他命等）</td>
+                                <td>46</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">馬修·派瑞 (Matthew Perry)</td>
+                                <td>演員 (《六人行》)/美國</td>
+                                <td>愷他命 (Ketamine) 急性影響導致溺水</td>
+                                <td>54</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">瑞凡·菲尼克斯 (River Phoenix)</td>
+                                <td>演員/美國</td>
+                                <td>海洛因與古柯鹼混合過量 (Speedball)</td>
+                                <td>23</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">約翰·貝魯西 (John Belushi)</td>
+                                <td>演員/喜劇演員/美國</td>
+                                <td>海洛因與古柯鹼混合過量</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">克里斯·法利 (Chris Farley)</td>
+                                <td>喜劇演員/美國</td>
+                                <td>嗎啡與古柯鹼混合過量</td>
+                                <td>33</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">瑪麗蓮·夢露 (Marilyn Monroe)</td>
+                                <td>演員/美國</td>
+                                <td>巴比妥類藥物過量 (disputed)</td>
+                                <td>36</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">安娜·妮可·史密斯 (Anna Nicole Smith)</td>
+                                <td>模特兒/演員/美國</td>
+                                <td>處方藥物混合過量</td>
+                                <td>39</td>
+                            </tr>
+                            <!-- 流行樂與饒舌歌手 -->
+                            <tr>
+                                <td class="font-bold">麥可·傑克森 (M. Jackson)</td>
+                                <td>歌手 (流行樂天王)/美國</td>
+                                <td>處方藥異丙酚 (Propofol) 過量</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">惠特妮·休斯頓 (W. Houston)</td>
+                                <td>歌手 (天后)/美國</td>
+                                <td>古柯鹼過量導致溺水</td>
+                                <td>48</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">王子 (Prince)</td>
+                                <td>歌手/音樂家/美國</td>
+                                <td>芬太尼 (Fentanyl) 過量</td>
+                                <td>57</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">麥克·米勒 (Mac Miller)</td>
+                                <td>饒舌歌手/美國</td>
+                                <td>芬太尼、古柯鹼、酒精混合過量</td>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">科里·蒙蒂思 (Cory Monteith)</td>
+                                <td>演員/歌手/加拿大</td>
+                                <td>海洛因與酒精混合過量</td>
+                                <td>31</td>
+                            </tr>
+                             <tr>
+                                <td class="font-bold">Coolio</td>
+                                <td>饒舌歌手/美國</td>
+                                <td>芬太尼過量</td>
+                                <td>59</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">Lil Peep</td>
+                                <td>饒舌歌手/美國</td>
+                                <td>芬太尼與贊安諾 (Xanax) 過量</td>
+                                <td>21</td>
+                            </tr>
+                             <!-- 其他 -->
+                             <tr>
+                                <td class="font-bold">貓王 艾維斯·普里斯萊 (Elvis Presley)</td>
+                                <td>歌手 (搖滾樂之王)/美國</td>
+                                <td>處方藥物混合（包括鎮靜劑、止痛藥）</td>
+                                <td>42</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">茱蒂·嘉蘭 (Judy Garland)</td>
+                                <td>演員/歌手/美國</td>
+                                <td>巴比妥類藥物過量</td>
+                                <td>47</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="mt-4 text-indigo-700 text-base font-medium">
+                    <i data-lucide="info" class="w-4 h-4 inline mr-1"></i>
+                    警示：許多過量死亡是因同時使用多種藥物或非法物質與處方藥混合所致，致命風險倍增。
+                </p>
+            </div>
+        </section>
+        
+        <!-- 治療與求助區塊 -->
+        <section class="mt-12 p-8 bg-blue-100 rounded-2xl border-2 border-blue-400 shadow-inner text-center">
+            <h3 class="text-3xl font-bold text-blue-800 mb-4">緊急求助與治療建議</h3>
+            <p class="text-blue-700 text-lg mb-6 leading-relaxed">
+                <i data-lucide="alert-triangle" class="w-5 h-5 inline text-blue-600 mr-2"></i>
+                停止濫用是唯一的治癒機會。 對於愷他命造成的膀胱損傷，儘早戒除能提高症狀改善的機率，但許多案例需進行長期藥物治療、膀胱擴張，甚至外科手術（如膀胱切除）。
+            </p>
+            <div class="flex justify-center flex-wrap gap-4">
+                <a href="https://www.mohw.gov.tw/" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150">
+                    <i data-lucide="external-link" class="w-5 h-5 mr-2"></i>
+                    聯繫官方衛生機構
+                </a>
+                <button onclick="showMessage('請立即尋求泌尿科與成癮治療專科醫師協助。', 'info')" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-lg text-blue-700 bg-white hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition duration-150">
+                    <i data-lucide="user-plus" class="w-5 h-5 mr-2"></i>
+                    尋求專業協助
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 底部版權與訊息框 -->
+    <footer class="mt-16 p-6 text-center text-sm text-gray-500 border-t-2 border-gray-300 bg-white">
+        &copy; 2025 毒品危害警示中心。請珍愛生命，遠離毒品。
+    </footer>
+
+    <!-- 自定義訊息框 (取代 alert/confirm) -->
+    <div id="custom-message-box" class="fixed inset-0 z-50 bg-gray-900 bg-opacity-50 hidden items-center justify-center p-4">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full transform transition-all duration-300 scale-95 opacity-0" id="message-content">
+            <div class="flex items-center mb-3">
+                <i id="message-icon" class="w-6 h-6 mr-2 text-blue-600"></i>
+                <h4 id="message-title" class="text-lg font-bold">提示</h4>
+            </div>
+            <p id="message-text" class="text-gray-700 mb-4"></p>
+            <button onclick="hideMessage()" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition">確定</button>
+        </div>
+    </div>
+
+    <script>
+        // 初始化 Lucide Icons
+        lucide.createIcons();
+
+        // 自定義訊息框邏輯
+        const messageBox = document.getElementById('custom-message-box');
+        const messageContent = document.getElementById('message-content');
+        const messageTitle = document.getElementById('message-title');
+        const messageText = document.getElementById('message-text');
+        const messageIcon = document.getElementById('message-icon');
+
+        /**
+         * 顯示自定義訊息框
+         * @param {string} text - 訊息內容
+         * @param {string} type - 訊息類型 ('info', 'warning')
+         */
+        function showMessage(text, type = 'info') {
+            messageText.textContent = text;
+            messageBox.classList.remove('hidden');
+            messageBox.classList.add('flex');
+            
+            // 設置標題和圖標
+            if (type === 'info') {
+                messageTitle.textContent = '資訊';
+                messageIcon.setAttribute('data-lucide', 'info');
+                messageIcon.className = 'w-6 h-6 mr-2 text-blue-600';
+            } else if (type === 'warning') {
+                messageTitle.textContent = '警告';
+                messageIcon.setAttribute('data-lucide', 'alert-triangle');
+                messageIcon.className = 'w-6 h-6 mr-2 text-yellow-600';
+            }
+            
+            // 重新繪製 Lucide 圖標
+            lucide.createIcons();
+
+            // 動畫效果
+            setTimeout(() => {
+                messageContent.classList.remove('scale-95', 'opacity-0');
+                messageContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function hideMessage() {
+            messageContent.classList.remove('scale-100', 'opacity-100');
+            messageContent.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                messageBox.classList.remove('flex');
+                messageBox.classList.add('hidden');
+            }, 300); // 確保動畫完成後再隱藏
+        }
+    </script>
+</body>
+</html>
+
